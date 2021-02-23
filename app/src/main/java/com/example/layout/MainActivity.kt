@@ -3,6 +3,9 @@ package com.example.layout
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
@@ -33,4 +36,37 @@ class MainActivity : AppCompatActivity() {
         }
         startActivity(intent)
     }
+
+    //------------------Funções Necesárias para mostrar o menu------------------
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater: MenuInflater = menuInflater
+        //Selecionar o menu que pretendemos mostrar
+        inflater.inflate(R.menu.menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        //Mediante o itemId selecionado mostrar um toast diferente
+        return when ( item.itemId){
+            R.id.create_new -> {
+                Toast.makeText(this, "create_new", Toast.LENGTH_SHORT).show()
+                true
+            }
+            R.id.opcao2 -> {
+                Toast.makeText(this, "opcao2", Toast.LENGTH_SHORT).show()
+                true
+            }
+            R.id.opcao3 -> {
+                Toast.makeText(this, "opcao3", Toast.LENGTH_SHORT).show()
+                true
+            }
+            R.id.opcao4 -> {
+                Toast.makeText(this, "opcao4", Toast.LENGTH_SHORT).show()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    //---------------------------------------------------------------------------
 }

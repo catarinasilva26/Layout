@@ -81,7 +81,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_weight="1"
-            android:text="TextView" />
+            android:onClick="button1"
+            android:text="Nova Atividade" />
 
         <Button
             android:id="@+id/textView4"
@@ -90,6 +91,6 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:onClick="button2"
-            android:text="TextView" />
+            android:text="Introduzir" />
     </LinearLayout>
 </RelativeLayout>
